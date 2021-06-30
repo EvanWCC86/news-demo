@@ -1,6 +1,6 @@
 import React, {useEffect,useState} from 'react'
 import News from '../components/News';
-import axios from 'axios'
+
 
 import {useGlobalContext} from '../context/globalContext'
 const HomePage = () => {
@@ -18,9 +18,9 @@ const HomePage = () => {
   const businessNews1 = someBusinessNews.slice(0,2)
   const businessNews2 = someBusinessNews.slice(2, 8)
 
-  const healthUrl = `http://api.mediastack.com/v1/news?access_key=${process.env.REACT_APP_YOUR_SERVICE_ID}&countries=us&categories=health`
-  const businessUrl = `http://api.mediastack.com/v1/news?access_key=${process.env.REACT_APP_YOUR_SERVICE_ID}&countries=us&categories=business`
-  const technologyUrl = `http://api.mediastack.com/v1/news?access_key=${process.env.REACT_APP_YOUR_SERVICE_ID}&countries=us&categories=technology`
+  const healthUrl = `http://api.mediastack.com/v1/news?access_key=${process.env.YOUR_SERVICE_ID}&countries=us&categories=health`
+  const businessUrl = `http://api.mediastack.com/v1/news?access_key=${process.env.YOUR_SERVICE_ID}&countries=us&categories=business`
+  const technologyUrl = `http://api.mediastack.com/v1/news?access_key=${process.env.YOUR_SERVICE_ID}&countries=us&categories=technology`
   const fetchCategoryNews = async (url,setCategoryNews) => {
    
         try {

@@ -9,9 +9,7 @@ const AppProvider = ({children}) => {
 
     const [newsData, setNewsData] = useState([]);
     const [loading, setLoading] = useState(false);
-    // const [textOnImage, setTextOnImage] = useState(true);
-    // const [smallCard, setSmallCard] = useState(true);
-    // const [largeCard, setLargeCard] = useState(true);
+    
     
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -20,7 +18,7 @@ const AppProvider = ({children}) => {
     }
 
     const fetchNews = async (category) => {
-        const url2 = `http://api.mediastack.com/v1/news?access_key=${process.env.REACT_APP_YOUR_SERVICE_ID}&countries=us&categories=${category}`
+        const url2 = `http://api.mediastack.com/v1/news?access_key=${process.env.YOUR_SERVICE_ID}&countries=us&categories=${category}`
         try {
             const res = await fetch(url2)
             const resData = await res.json()
@@ -31,24 +29,7 @@ const AppProvider = ({children}) => {
         }
     }
 
-    // const fetchNews = async (category) => {
-    //     const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${process.env.REACT_APP_YOUR_SERVICE_ID}`;
-        
-    //     try {
-    //         setLoading(true);
-    //         const res = await fetch(url);
-    //         const resData = await res.json();
-    //         const filterNews = resData.articles.filter((item) => item.urlToImage !== null )
-    //         setNewsData(resData)
-           
-    //         setLoading(false);
-    //     } catch (error) {
-    //         console.log(error)
-    //     }
-    // }
-    // useEffect(() => {
-    //     fetchNews(category);
-    // },[category])
+    
     useEffect(() => {
         fetchNews(category)
     },[category])
