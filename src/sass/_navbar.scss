@@ -1,0 +1,33 @@
+.navbar{
+    margin:20px auto;
+    font-family: $second_font;
+}
+
+.nav_container {
+
+    ul {
+        display: flex;
+        overflow: scroll;
+        scroll-behavior: smooth;
+    //    make scollbar hidden
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    
+        li {
+            list-style: none;
+            margin-right: 20px;
+        }
+        a {
+            text-decoration: none;
+            color:black;
+            text-transform: capitalize;
+            cursor: pointer;
+            &:hover {
+                color:$special_red;
+            }
+           
+            
+        }
+    }
+}

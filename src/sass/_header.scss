@@ -1,0 +1,51 @@
+.header {
+    background-color:black;
+    color:white;
+    padding:10px 0;
+    font-family: $second_font;
+}
+
+.header_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    ul {
+        flex:1;
+        display: flex;
+        
+        align-items: center;
+
+
+        li {
+            list-style: none;
+            margin-left: 20px;
+            a {
+                text-decoration: none;
+                color:white;
+            }
+        }
+    }
+}
+
+// brand
+
+.brand_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    padding:20px 0;
+    .brand{
+        flex:0.35;
+        
+    }
+    .brand_hero {
+        flex:0.65;
+        background-image: url("../image/hero.jpg");
+        height: 100%;
+        background-position: center center;
+        
+        background-size: cover;
+       
+    }
+}
